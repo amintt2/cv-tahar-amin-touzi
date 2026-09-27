@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tahar Amin Touzi — Développeur Full-Stack · iOS · IA</title>
+  <meta name="description" content="Développeur full-stack, iOS et IA. Un SaaS en production (Mailbase), deux apps sur l'App Store, des sites clients en ligne. Ouvert à un CDI ou un CDD.">
+  <link rel="canonical" href="https://tahar.french-web.com/">
+  <meta name="author" content="Tahar Amin Touzi">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0f0e0d" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Tahar Amin Touzi">
+  <meta property="og:title" content="Tahar Amin Touzi — Développeur Full-Stack · iOS · IA">
+  <meta property="og:description" content="Un SaaS en production, deux apps sur l'App Store, des sites clients en ligne. Ouvert à un CDI ou un CDD.">
+  <meta property="og:url" content="https://tahar.french-web.com/">
+  <meta property="og:image" content="https://tahar.french-web.com/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tahar Amin Touzi, développeur full-stack, iOS et IA">
+  <meta property="profile:first_name" content="Tahar Amin">
+  <meta property="profile:last_name" content="Touzi">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tahar Amin Touzi — Développeur Full-Stack · iOS · IA">
+  <meta name="twitter:description" content="Un SaaS en production, deux apps sur l'App Store, des sites clients en ligne.">
+  <meta name="twitter:image" content="https://tahar.french-web.com/assets/og.png">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/Geist-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Geist-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/InstrumentSerif-Italic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    // Thème : préférence mémorisée (facultative), sinon celle du système.
+    (function () {
+      try { var t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tahar Amin Touzi",
+    "jobTitle": "Développeur Full-Stack · iOS · IA",
+    "url": "https://tahar.french-web.com/",
+    "email": "mailto:amin2020e@gmail.com",
+    "image": "https://tahar.french-web.com/assets/og.png",
+    "sameAs": ["https://github.com/amintt2"],
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Université de Franche-Comté" },
+    "knowsLanguage": ["fr", "en"],
+    "knowsAbout": ["Next.js", "React", "TypeScript", "SwiftUI", "iOS", "PostgreSQL", "Model Context Protocol", "LLM", "Rust", "Tauri", "Three.js", "Stripe", "Docker", "Coolify"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Tahar Amin Touzi — haut de page">
+        <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="1" y="1" width="30" height="30" rx="9"/><path d="M9 11h14M16 11v12"/></svg>
+        <span class="brand-name">Tahar Amin Touzi</span>
+      </a>
+      <nav class="nav-links" aria-label="Navigation principale">
+        <a href="#projets">Projets</a>
+        <a href="#index">Index</a>
+        <a href="#competences">Compétences</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" type="button" aria-label="Changer de thème" title="Changer de thème">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+        </button>
+        <a class="btn btn-small" href="Tahar-Amin-Touzi-CV.pdf" download>CV <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"><div class="hero-grid"></div><div class="hero-glow"></div></div>
+      <div class="wrap">
+        <p class="eyebrow reveal"><span class="pulse" aria-hidden="true"></span> Ouvert à un CDI ou un CDD</p>
+        <h1 class="hero-title" id="hero-title">
+          <span class="line"><span class="word">Tahar</span> <span class="word">Amin</span></span>
+          <span class="line"><span class="word serif">Touzi</span><span class="hero-role word" aria-hidden="true">Full-Stack<br>iOS · IA</span></span>
+        </h1>
+        <div class="hero-bottom">
+          <div class="hero-copy reveal">
+            <p class="lead">Développeur <strong>full-stack, iOS et IA</strong>. Je conçois, je livre et j'opère des produits en production&nbsp;: un SaaS d'e-mailing avec agent IA, deux apps sur l'App&nbsp;Store, des sites pour de vrais clients.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="Tahar-Amin-Touzi-CV.pdf" download>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+                Télécharger le CV
+              </a>
+              <a class="btn" href="#projets">Voir les projets</a>
+              <a class="btn btn-ghost" href="mailto:amin2020e@gmail.com">amin2020e@gmail.com</a>
+            </div>
+          </div>
+          <aside class="now-card reveal" aria-label="En production actuellement">
+            <p class="now-title mono">En production</p>
+            <ul class="now-list">
+              <li><span class="dot dot-live" aria-hidden="true"></span><a href="https://mailbase.studio" target="_blank" rel="noopener">mailbase.studio</a><span class="now-kind">SaaS</span></li>
+              <li><span class="dot dot-store" aria-hidden="true"></span><a href="https://apps.apple.com/fr/app/scrollworthy-bloqueur/id6792513004" target="_blank" rel="noopener">Scrollworthy</a><span class="now-kind">App Store</span></li>
+              <li><span class="dot dot-live" aria-hidden="true"></span><a href="https://larelance.fr" target="_blank" rel="noopener">larelance.fr</a><span class="now-kind">SaaS</span></li>
+              <li><span class="dot dot-live" aria-hidden="true"></span><a href="https://lumen71.fr" target="_blank" rel="noopener">lumen71.fr</a><span class="now-kind">Client</span></li>
+              <li><span class="dot dot-live" aria-hidden="true"></span><a href="https://brumel.mciut.fr" target="_blank" rel="noopener">brumel.mciut.fr</a><span class="now-kind">Jeu</span></li>
+              <li><span class="dot dot-store" aria-hidden="true"></span><a href="https://apps.apple.com/fr/app/tally-app-tappy/id6759305108" target="_blank" rel="noopener">Tappy</a><span class="now-kind">App Store</span></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+
+      <!-- Bandeau de vraies captures -->
+      <div class="reel" aria-label="Captures de projets en ligne">
+        <div class="reel-track">
+          <ul class="reel-group">
+            <li><figure><img src="assets/shots/thumbs/mailbase.webp" width="800" height="500" alt="Page d'accueil de Mailbase" fetchpriority="high"><figcaption>Mailbase</figcaption></figure></li>
+            <li><figure><img src="assets/shots/thumbs/brumeval-village.webp" width="800" height="450" alt="Brumeval Online : le village de nuit"><figcaption>Brumeval Online</figcaption></figure></li>
+            <li><figure><img src="assets/shots/thumbs/lumen71.webp" width="800" height="500" alt="Site de l'association Lumen 71"><figcaption>Lumen 71</figcaption></figure></li>
+            <li><figure><img src="assets/shots/thumbs/larelance.webp" width="800" height="500" alt="Page d'accueil de LaRelance" loading="lazy"><figcaption>LaRelance</figcaption></figure></li>
+            <li><figure><img src="assets/shots/thumbs/coolify-mcp.webp" width="800" height="500" alt="Site de coolify-mcp" loading="lazy"><figcaption>coolify-mcp</figcaption></figure></li>
+            <li><figure><img src="assets/shots/thumbs/arcade.webp" width="800" height="500" alt="Landing Arcade by FrenchWeb" loading="lazy"><figcaption>Arcade</figcaption></figure></li>
+            <li><figure><img src="assets/shots/thumbs/mciut-electricien.webp" width="800" height="500" alt="Modèle de site pour électricien du réseau MCIUT" loading="lazy"><figcaption>MCIUT · électricien</figcaption></figure></li>
+            <li><figure><img src="assets/shots/thumbs/brumeval-launcher.webp" width="800" height="500" alt="Brumeval Online : écran de connexion et launcher" loading="lazy"><figcaption>Brumeval · launcher</figcaption></figure></li>
+            <li><figure><img src="assets/shots/thumbs/mciut.webp" width="800" height="500" alt="Site du studio web MCIUT" loading="lazy"><figcaption>MCIUT · studio web</figcaption></figure></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CHIFFRES ============ -->
+    <section class="stats wrap" aria-label="Quelques chiffres">
+      <dl class="stats-grid">
+        <div class="stat reveal"><dt>apps publiées sur l'App&nbsp;Store</dt><dd data-count="2">2</dd></div>
+        <div class="stat reveal"><dt>produits &amp; sites en ligne</dt><dd data-count="8">8</dd></div>
+        <div class="stat reveal"><dt>commits sur Mailbase, mon SaaS</dt><dd data-count="473">473</dd></div>
+        <div class="stat reveal"><dt>fichiers de tests sur Mailbase</dt><dd data-count="145">145</dd></div>
+        <div class="stat reveal"><dt>apps en production sur mon serveur</dt><dd><span class="approx">~</span><span data-count="10">10</span></dd></div>
+      </dl>
+    </section>
+
+    <!-- ============ PROJETS PHARES ============ -->
+    <section class="section" id="projets" aria-labelledby="projets-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker mono">01 — Projets phares</p>
+          <h2 id="projets-title">Des produits réels, <span class="serif">en ligne</span>, utilisés.</h2>
+          <p class="section-sub">Tout ce qui suit a été conçu, développé et mis en production depuis février&nbsp;2026, seul, du design à l'infrastructure.</p>
+        </header>
+
+        <!-- Mailbase -->
+        <article class="case" id="mailbase" style="--i:0">
+          <div class="case-media reveal">
+            <div class="browser">
+              <div class="browser-bar"><span></span><span></span><span></span><p class="browser-url mono">mailbase.studio</p></div>
+              <img src="assets/shots/mailbase.webp" width="1600" height="1000" alt="Page d'accueil de Mailbase : « Name your customer. »" loading="lazy">
+            </div>
+            <div class="phone phone-float"><img src="assets/shots/mailbase-m.webp" width="540" height="1169" alt="Mailbase sur mobile" loading="lazy"></div>
+          </div>
+          <div class="case-body reveal">
+            <p class="case-meta mono"><span>01</span> Produit SaaS · depuis mai 2026</p>
+            <h3 class="case-title">Mailbase</h3>
+            <ul class="badges"><li class="badge badge-live">En ligne</li><li class="badge">Fondateur</li></ul>
+            <p class="case-pitch">Agent de prospection par e-mail bâti sur le registre SIRENE&nbsp;: il trouve les entreprises, vérifie les adresses, rédige des e-mails personnalisés par IA et trie les réponses par intention.</p>
+            <ul class="points">
+              <li>Envoi multi-tenant (Amazon SES, useSend) avec coupe-circuit sur les rebonds et plaintes, conçu après un vrai incident d'abus.</li>
+              <li>Assistant agentique intégré (Vercel AI SDK, multi-fournisseurs) et serveur MCP avec OAuth&nbsp;: Claude, Cursor ou Codex agissent sur les données du workspace. Distribué en plugin Codex.</li>
+              <li>Facturation Stripe, quotas par offre, interface bilingue FR/EN, boîte de réception triée par intention, workflows, tests A/B.</li>
+              <li>API publique d'envoi réutilisée comme infrastructure e-mail par 4 de mes autres projets.</li>
+              <li><strong>473 commits, 145 fichiers de tests</strong> (unitaires + navigateur Playwright), 106 migrations SQL, CI.</li>
+            </ul>
+            <ul class="chips" aria-label="Stack"><li>Next.js 16</li><li>PostgreSQL</li><li>Auth.js</li><li>Amazon SES</li><li>Stripe</li><li>Vercel AI SDK</li><li>MCP</li><li>Playwright</li></ul>
+            <p class="links">
+              <a class="link-arrow" href="https://mailbase.studio" target="_blank" rel="noopener">mailbase.studio</a>
+              <a class="link-arrow" href="https://github.com/amintt2/mailbase-codex-plugin" target="_blank" rel="noopener">Plugin Codex (GitHub)</a>
+              <span class="private mono">Code source privé</span>
+            </p>
+          </div>
+        </article>
+
+        <!-- Scrollworthy -->
+        <article class="case case-flip" id="scrollworthy">
+          <div class="case-media reveal">
+            <div class="phones-stage tint-violet">
+              <div class="phone p-left"><img src="assets/shots/scrollworthy-2.webp" width="540" height="1168" alt="Scrollworthy : « Ici, le scroll se mérite »" loading="lazy"></div>
+              <div class="phone p-center"><img src="assets/shots/scrollworthy-1.webp" width="540" height="1168" alt="Scrollworthy : objectif géolocalisé à la salle de sport" loading="lazy"></div>
+              <div class="phone p-right"><img src="assets/shots/scrollworthy-4.webp" width="540" height="1168" alt="Scrollworthy : minuteur avec vérifications photo" loading="lazy"></div>
+              <img class="app-icon" src="assets/shots/scrollworthy-icon.webp" width="256" height="256" alt="" loading="lazy">
+            </div>
+          </div>
+          <div class="case-body reveal">
+            <p class="case-meta mono"><span>02</span> App iOS · sortie le 7&nbsp;sept.&nbsp;2026</p>
+            <h3 class="case-title">Scrollworthy</h3>
+            <ul class="badges"><li class="badge badge-store">App Store</li><li class="badge badge-live">Web en ligne</li></ul>
+            <p class="case-pitch">Une app iOS qui bloque les réseaux sociaux et convertit un effort réel vérifié (sport, travail, pas) en minutes de scroll.</p>
+            <ul class="points">
+              <li>API Screen Time&nbsp;: FamilyControls, ManagedSettings, extensions DeviceActivity et Shield qui partagent leur état via un App Group.</li>
+              <li>Objectifs faits de «&nbsp;vérificateurs&nbsp;»&nbsp;: minuteur avec photos surprises, géorepérage, HealthKit, NFC/QR, et un service anti-triche.</li>
+              <li>Mode duo et modèles communautaires en pair-à-pair (Holepunch Bare Kit + hyperswarm) embarqués dans iOS.</li>
+              <li>Paywall RevenueCat + paiement web, programme d'affiliation pour créateurs (liens, webhooks, commissions, app «&nbsp;Creators&nbsp;»).</li>
+              <li>Autour de l'app&nbsp;: tableau de bord web avec passkeys, et une app macOS notarisée qui monte des vidéos courtes avec Remotion.</li>
+            </ul>
+            <ul class="chips" aria-label="Stack"><li>SwiftUI</li><li>SwiftData</li><li>Screen Time</li><li>WidgetKit</li><li>HealthKit</li><li>RevenueCat</li><li>Xcode Cloud</li><li>Next.js</li></ul>
+            <p class="links">
+              <a class="link-arrow" href="https://apps.apple.com/fr/app/scrollworthy-bloqueur/id6792513004" target="_blank" rel="noopener">Voir sur l'App Store</a>
+              <a class="link-arrow" href="https://scrollworthy.french-web.com" target="_blank" rel="noopener">scrollworthy.french-web.com</a>
+              <span class="private mono">Code source privé</span>
+            </p>
+          </div>
+        </article>
+
+        <!-- Brumeval -->
+        <article class="case" id="brumeval">
+          <div class="case-media reveal">
+            <div class="game-stack">
+              <figure class="shot shot-main"><img src="assets/shots/brumeval-village.webp" width="1280" height="720" alt="Brumeval Online : le village éclairé de nuit, interface de jeu" loading="lazy"></figure>
+              <figure class="shot shot-inset"><img src="assets/shots/brumeval-launcher.webp" width="1440" height="900" alt="Brumeval Online : création de compte et téléchargement du launcher" loading="lazy"></figure>
+            </div>
+          </div>
+          <div class="case-body reveal">
+            <p class="case-meta mono"><span>03</span> Jeu vidéo &amp; 3D · sept. 2026</p>
+            <h3 class="case-title">Brumeval Online</h3>
+            <ul class="badges"><li class="badge badge-live">En ligne</li><li class="badge badge-oss">Open source</li></ul>
+            <p class="case-pitch">Un MMORPG multijoueur jouable dans le navigateur, dont tous les modèles 3D, animations et icônes sont générés par code avec Blender.</p>
+            <ul class="points">
+              <li>Serveur Node.js autoritatif (WebSocket, deltas, grille spatiale) avec anti-triche vitesse, téléportation et murs.</li>
+              <li>Client Three.js&nbsp;: cycle jour/nuit synchronisé par le serveur, ombres en cascade, HDR, terrain PBR, herbe et eau.</li>
+              <li>Pipeline Blender 5 sans interface&nbsp;: <strong>77 scripts Python</strong> génèrent chaque asset (matériaux nodaux, baking GPU, LOD). Aucun asset téléchargé.</li>
+              <li>Combat exigeant, 3 classes, boss en 3 phases, arbre de 65 talents piloté par les données, comptes avec passkeys.</li>
+              <li><strong>109 commits en 4 jours</strong>, launcher Electron (Windows, macOS, Linux) et PWA.</li>
+            </ul>
+            <ul class="chips" aria-label="Stack"><li>Three.js</li><li>Node.js</li><li>WebSocket</li><li>Blender · Python</li><li>Electron</li><li>Docker</li></ul>
+            <p class="links">
+              <a class="link-arrow" href="https://brumel.mciut.fr" target="_blank" rel="noopener">Jouer : brumel.mciut.fr</a>
+              <a class="link-arrow" href="https://github.com/amintt2/brumeval-online" target="_blank" rel="noopener">Code sur GitHub</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- LaRelance -->
+        <article class="case case-flip" id="larelance">
+          <div class="case-media reveal">
+            <div class="browser">
+              <div class="browser-bar"><span></span><span></span><span></span><p class="browser-url mono">larelance.fr</p></div>
+              <img src="assets/shots/larelance.webp" width="1600" height="1000" alt="Page d'accueil de LaRelance : « Remplissez votre salle avec un SMS. »" loading="lazy">
+            </div>
+            <div class="phone phone-float"><img src="assets/shots/larelance-m.webp" width="540" height="1169" alt="LaRelance sur mobile" loading="lazy"></div>
+          </div>
+          <div class="case-body reveal">
+            <p class="case-meta mono"><span>04</span> Produit SaaS · août 2026</p>
+            <h3 class="case-title">LaRelance</h3>
+            <ul class="badges"><li class="badge badge-live">En ligne</li><li class="badge badge-client">Premier client</li></ul>
+            <p class="case-pitch">Campagnes SMS pour les commerces de proximité&nbsp;: le commerçant importe son fichier client, écrit sa promo, voit le coût exact et envoie. La conformité française est gérée par la plateforme.</p>
+            <ul class="points">
+              <li>Premier client&nbsp;: une pizzeria, environ 400 contacts.</li>
+              <li>Import de fichiers de caisse désordonnés avec détection des colonnes assistée par IA&nbsp;; rédaction IA en 3 angles, avec comptage exact des segments GSM-7/UCS-2 renvoyé au modèle.</li>
+              <li>Données personnelles masquées caractère par caractère avant tout appel au LLM, avec une garde finale.</li>
+              <li>STOP, plages horaires légales avec report automatique, coupe-circuit au-delà de 5&nbsp;% de désinscriptions.</li>
+              <li>File d'envoi verrouillée en base&nbsp;: un seul expéditeur par campagne, reprise possible, jamais de double envoi.</li>
+            </ul>
+            <ul class="chips" aria-label="Stack"><li>Next.js 16</li><li>PostgreSQL</li><li>Drizzle</li><li>better-auth</li><li>Stripe</li><li>smsmode</li><li>DeepSeek</li></ul>
+            <p class="links">
+              <a class="link-arrow" href="https://larelance.fr" target="_blank" rel="noopener">larelance.fr</a>
+              <span class="private mono">Code source privé</span>
+            </p>
+          </div>
+        </article>
+
+        <!-- Lumen 71 -->
+        <article class="case" id="lumen71">
+          <div class="case-media reveal">
+            <div class="browser">
+              <div class="browser-bar"><span></span><span></span><span></span><p class="browser-url mono">lumen71.fr</p></div>
+              <img src="assets/shots/lumen71.webp" width="1600" height="1000" alt="Site de Lumen 71 : « Reprendre confiance pour avancer. »" loading="lazy">
+            </div>
+            <div class="phone phone-float"><img src="assets/shots/lumen71-m.webp" width="540" height="1169" alt="Site de Lumen 71 sur mobile" loading="lazy"></div>
+          </div>
+          <div class="case-body reveal">
+            <p class="case-meta mono"><span>05</span> Projet client · août 2026</p>
+            <h3 class="case-title">Lumen 71</h3>
+            <ul class="badges"><li class="badge badge-live">En ligne</li><li class="badge badge-client">Client</li></ul>
+            <p class="case-pitch">Le site de l'association Lumen 71, qui organise des séjours éducatifs pour des jeunes de 7 à 21 ans confiés à l'aide sociale à l'enfance.</p>
+            <ul class="points">
+              <li>Contenus écrits pour les structures qui orientent les jeunes (référents ASE, familles d'accueil).</li>
+              <li>Formulaires de contact et newsletter branchés sur l'API Mailbase&nbsp;: notification, accusé de réception, pot de miel anti-spam.</li>
+              <li>Galeries photo avec visionneuse plein écran, page du séjour «&nbsp;Horizon Maroc&nbsp;», mentions légales.</li>
+              <li>Au-delà du site&nbsp;: 5 modèles Word de documents d'accueil avec générateur, et un kit de signature e-mail.</li>
+            </ul>
+            <ul class="chips" aria-label="Stack"><li>Next.js 16</li><li>React 19</li><li>Tailwind v4</li><li>Zod</li><li>PostHog</li><li>Docker</li></ul>
+            <p class="links">
+              <a class="link-arrow" href="https://lumen71.fr" target="_blank" rel="noopener">lumen71.fr</a>
+              <span class="private mono">Code source privé</span>
+            </p>
+          </div>
+        </article>
+
+        <!-- coolify-mcp -->
+        <article class="case case-flip" id="coolify-mcp">
+          <div class="case-media reveal">
+            <div class="browser">
+              <div class="browser-bar"><span></span><span></span><span></span><p class="browser-url mono">amintt2.github.io/coolify-mcp</p></div>
+              <img src="assets/shots/coolify-mcp.webp" width="1600" height="1000" alt="Site de coolify-mcp : « Let your AI agent run your Coolify. Safely. »" loading="lazy">
+            </div>
+          </div>
+          <div class="case-body reveal">
+            <p class="case-meta mono"><span>06</span> IA &amp; outils dev · sept. 2026</p>
+            <h3 class="case-title">coolify-mcp</h3>
+            <ul class="badges"><li class="badge badge-oss">Open source · MIT</li><li class="badge badge-live">Site en ligne</li></ul>
+            <p class="case-pitch">Un serveur MCP qui permet à un agent IA de piloter en toute sécurité une instance Coolify auto-hébergée.</p>
+            <ul class="points">
+              <li>18 outils&nbsp;: découverte des apps, services, bases et serveurs, variables d'environnement, déploiements, logs.</li>
+              <li>Secrets masqués par défaut (les révéler demande un drapeau côté outil <em>et</em> côté serveur), dry-run des changements, mode lecture seule.</li>
+              <li>Contourne un comportement de l'API Coolify qui réinitialise silencieusement des options&nbsp;; jetons masqués dans les erreurs.</li>
+              <li>Tests, CI, site avec générateur de configuration. Né de l'exploitation de mes ~10 apps en production.</li>
+            </ul>
+            <ul class="chips" aria-label="Stack"><li>TypeScript</li><li>Node 20</li><li>MCP SDK</li><li>Coolify API</li><li>GitHub Actions</li></ul>
+            <p class="links">
+              <a class="link-arrow" href="https://amintt2.github.io/coolify-mcp/" target="_blank" rel="noopener">Site du projet</a>
+              <a class="link-arrow" href="https://github.com/amintt2/coolify-mcp" target="_blank" rel="noopener">Code sur GitHub</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Projets phares compacts -->
+        <div class="minis">
+          <article class="mini reveal" id="ardoise">
+            <div class="mini-visual chain" aria-hidden="true">
+              <div class="block"><span class="mono">#1041</span><span class="mono h">a3f9…c07e</span></div>
+              <div class="link-line"></div>
+              <div class="block"><span class="mono">#1042</span><span class="mono h">5be1…9d42</span></div>
+              <div class="link-line"></div>
+              <div class="block block-accent"><span class="mono">#1043</span><span class="mono h">Ed25519 ✓</span></div>
+            </div>
+            <div class="mini-body">
+              <p class="case-meta mono"><span>07</span> Produit SaaS · août 2026</p>
+              <h3>Ardoise</h3>
+              <ul class="badges"><li class="badge badge-wip">En cours</li></ul>
+              <p>Logiciel de caisse pour pizzerias et restauration rapide, conforme à la loi anti-fraude TVA, où la caisse est elle-même le serveur.</p>
+              <ul class="points">
+                <li>Journal fiscal (CGI art.&nbsp;286-I-3° bis)&nbsp;: écriture seule imposée par triggers SQLite, séquence sans trou, chaînage SHA-256, signature Ed25519 par caisse.</li>
+                <li>Hors-ligne d'abord, cloud en miroir, imprimantes ESC/POS et écran cuisine en réseau local.</li>
+                <li>Deux auto-audits adverses&nbsp;: 13 failles trouvées, dont 3 critiques, corrigées. 54 fichiers de tests.</li>
+              </ul>
+              <ul class="chips"><li>Bun</li><li>Expo · RN Web</li><li>Next.js</li><li>SQLite · Drizzle</li></ul>
+              <p class="links"><span class="private mono">Code source privé · pas encore déployé</span></p>
+            </div>
+          </article>
+
+          <article class="mini reveal" id="dossier">
+            <div class="mini-visual lineage" aria-hidden="true">
+              <div class="step"><span class="mono">fév.</span><strong>Paprasse</strong><em>Expo</em></div>
+              <div class="step"><span class="mono">juin</span><strong>paperwork-agent</strong><em>Electron</em></div>
+              <div class="step step-accent"><span class="mono">août</span><strong>Dossier</strong><em>Swift natif</em></div>
+            </div>
+            <div class="mini-body">
+              <p class="case-meta mono"><span>08</span> App iOS &amp; IA · août 2026</p>
+              <h3>Dossier</h3>
+              <ul class="badges"><li class="badge badge-wip">Prototype</li></ul>
+              <p>Un coffre-fort de papiers administratifs sur iPhone&nbsp;: l'IA embarquée lit, classe et surveille les échéances, sans que rien ne quitte l'appareil.</p>
+              <ul class="points">
+                <li>Apple Foundation Models (LLM embarqué) avec un harnais d'agent&nbsp;: modes de permission, flux d'événements, annulation complète.</li>
+                <li>Dates candidates déterministes et vérificateur indépendant (MRZ du passeport)&nbsp;: aucun rappel ne repose sur une date inventée.</li>
+                <li>Un mini-langage de requête (parseur descendant récursif) partagé par la recherche et les règles de classement. Chiffrement AES-GCM + Keychain.</li>
+              </ul>
+              <ul class="chips"><li>SwiftUI</li><li>SwiftData</li><li>Foundation Models</li><li>Vision OCR</li><li>StoreKit 2</li></ul>
+              <p class="links"><a class="link-arrow" href="https://github.com/amintt2/dossier" target="_blank" rel="noopener">Site vitrine (GitHub)</a><span class="private mono">App privée</span></p>
+            </div>
+          </article>
+
+          <article class="mini reveal" id="murmure">
+            <div class="mini-visual wave" aria-hidden="true">
+              <div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <p class="kbd mono"><kbd>⌥</kbd><kbd>Espace</kbd></p>
+            </div>
+            <div class="mini-body">
+              <p class="case-meta mono"><span>09</span> IA &amp; outils · sept. 2026</p>
+              <h3>Murmure</h3>
+              <ul class="badges"><li class="badge badge-oss">Open source</li><li class="badge badge-live">v0.2.0 publiée</li></ul>
+              <p>Dictée vocale locale et hors-ligne, déclenchée par un raccourci clavier, qui insère le texte dans n'importe quel champ (macOS et Windows).</p>
+              <ul class="points">
+                <li>Tauri 2 + Rust, reconnaissance vocale locale via whisper.cpp, llama.cpp et sherpa-onnx.</li>
+                <li>Choix du modèle avec scores de référence et benchmark de vitesse sur la machine.</li>
+                <li>Builds multi-plateformes signés et notarisés (Developer ID) par GitHub Actions, mises à jour automatiques.</li>
+              </ul>
+              <ul class="chips"><li>Rust</li><li>Tauri 2</li><li>whisper.cpp</li><li>llama.cpp</li><li>GitHub Actions</li></ul>
+              <p class="links"><a class="link-arrow" href="https://github.com/amintt2/murmure" target="_blank" rel="noopener">Code et releases sur GitHub</a></p>
+            </div>
+          </article>
+
+          <article class="mini reveal" id="tappy">
+            <div class="mini-visual phones-mini tint-sun" aria-hidden="true">
+              <img src="assets/shots/tappy-2.webp" width="540" height="1168" alt="" loading="lazy">
+              <img src="assets/shots/tappy-3.webp" width="540" height="1168" alt="" loading="lazy">
+              <img src="assets/shots/tappy-1.webp" width="540" height="1168" alt="" loading="lazy">
+            </div>
+            <div class="mini-body">
+              <p class="case-meta mono"><span>10</span> App iOS · sortie le 10&nbsp;mars&nbsp;2026</p>
+              <h3>Tappy</h3>
+              <ul class="badges"><li class="badge badge-store">App Store</li></ul>
+              <p>Un compteur iOS minimaliste avec widget d'écran d'accueil, statistiques et 30 langues. Ma première app publiée, de bout en bout.</p>
+              <ul class="points">
+                <li>Compteurs multiples, historique et statistiques, annulation, retours haptiques.</li>
+                <li>Widget Swift partagé via App Group, abonnement premium et paywall.</li>
+                <li>Fiche App Store localisée en 30 langues.</li>
+              </ul>
+              <ul class="chips"><li>Expo</li><li>React Native</li><li>Swift · WidgetKit</li><li>react-native-iap</li></ul>
+              <p class="links"><a class="link-arrow" href="https://apps.apple.com/fr/app/tally-app-tappy/id6759305108" target="_blank" rel="noopener">Voir sur l'App Store</a><span class="private mono">Code source privé</span></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INDEX ============ -->
+    <section class="section section-alt" id="index" aria-labelledby="index-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker mono">02 — Index</p>
+          <h2 id="index-title">Tous les projets, <span class="serif">par catégorie</span>.</h2>
+          <p class="section-sub">Février → septembre 2026. Les prototypes sont signalés comme tels.</p>
+        </header>
+
+        <div class="filters reveal" role="group" aria-label="Filtrer les projets">
+          <button type="button" class="chip-btn" aria-pressed="true" data-filter="all">Tous <span class="count"></span></button>
+          <button type="button" class="chip-btn" aria-pressed="false" data-filter="saas">Produits SaaS <span class="count"></span></button>
+          <button type="button" class="chip-btn" aria-pressed="false" data-filter="mobile">Apps iOS &amp; mobile <span class="count"></span></button>
+          <button type="button" class="chip-btn" aria-pressed="false" data-filter="ia">IA, agents &amp; outils dev <span class="count"></span></button>
+          <button type="button" class="chip-btn" aria-pressed="false" data-filter="client">Clients &amp; studio web <span class="count"></span></button>
+          <button type="button" class="chip-btn" aria-pressed="false" data-filter="3d">Jeu vidéo &amp; 3D <span class="count"></span></button>
+        </div>
+
+        <ol class="index-list" aria-live="polite">
+          <li class="row" data-cat="saas" data-preview="assets/shots/thumbs/mailbase.webp">
+            <span class="row-date mono">05.2026</span>
+            <a class="row-name" href="#mailbase">Mailbase</a>
+            <span class="row-desc">Agent de prospection e-mail sur le registre SIRENE, IA, MCP, Stripe.</span>
+            <span class="row-status"><span class="badge badge-live">En ligne</span></span>
+          </li>
+          <li class="row" data-cat="saas client" data-preview="assets/shots/thumbs/larelance.webp">
+            <span class="row-date mono">08.2026</span>
+            <a class="row-name" href="#larelance">LaRelance</a>
+            <span class="row-desc">Campagnes SMS conformes pour commerces de proximité. Premier client&nbsp;: une pizzeria.</span>
+            <span class="row-status"><span class="badge badge-live">En ligne</span></span>
+          </li>
+          <li class="row" data-cat="saas">
+            <span class="row-date mono">08.2026</span>
+            <a class="row-name" href="#ardoise">Ardoise</a>
+            <span class="row-desc">Caisse enregistreuse conforme anti-fraude TVA&nbsp;: chaînage SHA-256, signatures Ed25519, hors-ligne.</span>
+            <span class="row-status"><span class="badge badge-wip">En cours</span></span>
+          </li>
+          <li class="row" data-cat="mobile" data-preview="assets/shots/thumbs/scrollworthy-web.webp">
+            <span class="row-date mono">07.2026</span>
+            <a class="row-name" href="#scrollworthy">Scrollworthy</a>
+            <span class="row-desc">Bloqueur de réseaux sociaux&nbsp;: l'effort vérifié rapporte du temps d'écran. Screen Time, HealthKit, P2P.</span>
+            <span class="row-status"><span class="badge badge-store">App Store</span></span>
+          </li>
+          <li class="row" data-cat="mobile">
+            <span class="row-date mono">02.2026</span>
+            <a class="row-name" href="#tappy">Tappy</a>
+            <span class="row-desc">Compteur minimaliste avec widget et 30 langues. Première app publiée.</span>
+            <span class="row-status"><span class="badge badge-store">App Store</span></span>
+          </li>
+          <li class="row" data-cat="mobile ia">
+            <span class="row-date mono">08.2026</span>
+            <a class="row-name" href="#dossier">Dossier</a>
+            <span class="row-desc">Coffre-fort de papiers administratifs avec LLM embarqué, rien ne quitte l'iPhone.</span>
+            <span class="row-status"><span class="badge badge-wip">Prototype</span></span>
+          </li>
+          <li class="row" data-cat="mobile">
+            <span class="row-date mono">02.2026</span>
+            <span class="row-name">Paprasse</span>
+            <span class="row-desc">Première version de Dossier en Expo, avec un module natif Apple Vision OCR. Bêta TestFlight.</span>
+            <span class="row-status"><span class="badge badge-muted">Arrêté</span></span>
+          </li>
+          <li class="row" data-cat="mobile">
+            <span class="row-date mono">02.2026</span>
+            <span class="row-name">Six Degrees</span>
+            <span class="row-desc">Réseau social qui vérifie les rencontres (BLE + QR) et calcule les degrés de séparation (BFS en PL/pgSQL).</span>
+            <span class="row-status"><span class="badge badge-wip">Prototype</span></span>
+          </li>
+          <li class="row" data-cat="mobile 3d">
+            <span class="row-date mono">02.2026</span>
+            <span class="row-name">WiiPass</span>
+            <span class="row-desc">Un «&nbsp;StreetPass&nbsp;» mobile&nbsp;: rencontres passives et place 3D en React Three Fiber.</span>
+            <span class="row-status"><span class="badge badge-wip">Prototype</span></span>
+          </li>
+          <li class="row" data-cat="ia" data-preview="assets/shots/thumbs/coolify-mcp.webp">
+            <span class="row-date mono">09.2026</span>
+            <a class="row-name" href="#coolify-mcp">coolify-mcp</a>
+            <span class="row-desc">Serveur MCP pour piloter Coolify depuis un agent IA, secrets masqués, dry-run.</span>
+            <span class="row-status"><span class="badge badge-oss">Open source</span></span>
+          </li>
+          <li class="row" data-cat="ia">
+            <span class="row-date mono">09.2026</span>
+            <a class="row-name" href="#murmure">Murmure</a>
+            <span class="row-desc">Dictée vocale locale et hors-ligne, Tauri + Rust, builds signés et notarisés.</span>
+            <span class="row-status"><span class="badge badge-oss">Open source</span></span>
+          </li>
+          <li class="row" data-cat="ia">
+            <span class="row-date mono">06.2026</span>
+            <span class="row-name">Agent SDR</span>
+            <span class="row-desc">Prototype d'agent de prospection autonome&nbsp;: FastAPI, Redis Streams, app iPhone SwiftUI. Intégré ensuite à Mailbase.</span>
+            <span class="row-status"><span class="badge badge-muted">Intégré</span></span>
+          </li>
+          <li class="row" data-cat="ia">
+            <span class="row-date mono">07.2026</span>
+            <span class="row-name">Interrupt Drop</span>
+            <span class="row-desc">App macOS notarisée qui monte des vidéos courtes avec Remotion pour Scrollworthy, avec workflows en nœuds.</span>
+            <span class="row-status"><span class="badge badge-muted">Outil interne</span></span>
+          </li>
+          <li class="row" data-cat="ia">
+            <span class="row-date mono">05.2026</span>
+            <span class="row-name">Underrated</span>
+            <span class="row-desc">Recherche de mots-clés SEO à fort trafic et faible concurrence, score d'opportunité, export CSV.</span>
+            <span class="row-status"><span class="badge badge-wip">Prototype</span></span>
+          </li>
+          <li class="row" data-cat="ia">
+            <span class="row-date mono">02.2026</span>
+            <span class="row-name">Outils ASO</span>
+            <span class="row-desc">Recherche de mots-clés App Store et Apple Search Ads, avec un serveur MCP.</span>
+            <span class="row-status"><span class="badge badge-wip">Prototype</span></span>
+          </li>
+          <li class="row" data-cat="client" data-preview="assets/shots/thumbs/lumen71.webp">
+            <span class="row-date mono">08.2026</span>
+            <a class="row-name" href="#lumen71">Lumen 71</a>
+            <span class="row-desc">Site d'une association d'aide à l'enfance, formulaires via Mailbase, kit documentaire.</span>
+            <span class="row-status"><span class="badge badge-live">En ligne</span></span>
+          </li>
+          <li class="row" data-cat="client">
+            <span class="row-date mono">06.2026</span>
+            <span class="row-name">Zayaniss Soins</span>
+            <span class="row-desc">E-commerce de cosmétiques naturels&nbsp;: Medusa v2, paiement Stripe 3DS, expéditions Boxtal, e-mails transactionnels.</span>
+            <span class="row-status"><span class="badge badge-client">Prêt au lancement</span></span>
+          </li>
+          <li class="row" data-cat="client" data-preview="assets/shots/thumbs/mciut-plombier.webp">
+            <span class="row-date mono">06.2026</span>
+            <a class="row-name" href="https://site.mciut.fr" target="_blank" rel="noopener">Réseau MCIUT</a>
+            <span class="row-desc">Mon studio web pour artisans en Bourgogne&nbsp;: Astro 5, pages ville en SEO local, 3 modèles de sites métier.</span>
+            <span class="row-status"><span class="badge badge-live">En ligne ×4</span></span>
+          </li>
+          <li class="row" data-cat="client">
+            <span class="row-date mono">07.2026</span>
+            <span class="row-name">Satisfaction Kit</span>
+            <span class="row-desc">Lit chaque jour les tickets de caisse d'un magasin et alimente un tableau de bord Notion de fidélité. Validé sur 2&nbsp;873 tickets réels.</span>
+            <span class="row-status"><span class="badge badge-client">Livré</span></span>
+          </li>
+          <li class="row" data-cat="client 3d" data-preview="assets/shots/thumbs/arcade.webp">
+            <span class="row-date mono">05.2026</span>
+            <a class="row-name" href="https://arcade.french-web.com" target="_blank" rel="noopener">Arcade</a>
+            <span class="row-desc">Landing FrenchWeb pour des expériences de marque sur Roblox&nbsp;: WebGL, GSAP, double opt-in, CSP stricte.</span>
+            <span class="row-status"><span class="badge badge-live">En ligne</span></span>
+          </li>
+          <li class="row" data-cat="3d" data-preview="assets/shots/thumbs/brumeval-village.webp">
+            <span class="row-date mono">09.2026</span>
+            <a class="row-name" href="#brumeval">Brumeval Online</a>
+            <span class="row-desc">MMORPG navigateur, assets 3D générés par code avec Blender, netcode autoritatif.</span>
+            <span class="row-status"><span class="badge badge-live">En ligne</span></span>
+          </li>
+        </ol>
+        <p class="index-empty" hidden>Aucun projet dans cette catégorie.</p>
+      </div>
+      <img class="preview" alt="" aria-hidden="true" width="320" height="200">
+    </section>
+
+    <!-- ============ COMPÉTENCES ============ -->
+    <section class="section" id="competences" aria-labelledby="skills-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker mono">03 — Compétences</p>
+          <h2 id="skills-title">Ce que j'utilise <span class="serif">en production</span>.</h2>
+          <p class="section-sub">Chaque ligne s'appuie sur des projets visibles plus haut, pas sur une liste de mots-clés.</p>
+        </header>
+
+        <div class="skills">
+          <div class="skill reveal">
+            <h3>Langages</h3>
+            <ul class="chips"><li>TypeScript</li><li>JavaScript</li><li>Swift</li><li>Python</li><li>Rust</li><li>SQL · PL/pgSQL</li></ul>
+          </div>
+          <div class="skill reveal">
+            <h3>Web</h3>
+            <ul class="chips"><li>Next.js App Router</li><li>React 19</li><li>Tailwind v4</li><li>Astro</li><li>Node.js</li><li>Hono</li><li>FastAPI</li><li>Medusa v2</li></ul>
+            <p class="skill-note">Next.js sur 11 projets, dont Mailbase et LaRelance.</p>
+          </div>
+          <div class="skill reveal">
+            <h3>iOS, mobile &amp; desktop</h3>
+            <ul class="chips"><li>SwiftUI</li><li>SwiftData</li><li>Screen Time API</li><li>WidgetKit</li><li>HealthKit</li><li>StoreKit 2</li><li>Expo · React Native</li><li>Tauri 2</li><li>Electron</li></ul>
+            <p class="skill-note">2 apps publiées, TestFlight, Xcode Cloud, signature et notarisation.</p>
+          </div>
+          <div class="skill reveal">
+            <h3>IA &amp; agents</h3>
+            <ul class="chips"><li>Vercel AI SDK</li><li>MCP (serveurs, OAuth)</li><li>OpenRouter · DeepSeek</li><li>Apple Foundation Models</li><li>whisper.cpp · llama.cpp</li><li>Masquage de données avant LLM</li></ul>
+          </div>
+          <div class="skill reveal">
+            <h3>Données</h3>
+            <ul class="chips"><li>PostgreSQL</li><li>postgres.js</li><li>Drizzle</li><li>Prisma</li><li>pgvector</li><li>SQLite</li><li>Redis Streams</li><li>Supabase</li><li>Appwrite</li></ul>
+          </div>
+          <div class="skill reveal">
+            <h3>Infra &amp; DevOps</h3>
+            <ul class="chips"><li>Coolify auto-hébergé</li><li>Docker</li><li>GitHub Actions</li><li>Xcode Cloud</li><li>Hetzner</li><li>Linux · systemd</li><li>PostHog</li></ul>
+            <p class="skill-note">Environ 10 apps en production sur mon propre serveur.</p>
+          </div>
+          <div class="skill reveal">
+            <h3>Paiement, e-mail &amp; SMS</h3>
+            <ul class="chips"><li>Stripe</li><li>RevenueCat</li><li>Amazon SES</li><li>useSend</li><li>MJML</li><li>smsmode</li></ul>
+          </div>
+          <div class="skill reveal">
+            <h3>Qualité, sécurité &amp; conformité</h3>
+            <ul class="chips"><li>Playwright</li><li>node:test</li><li>Passkeys · WebAuthn</li><li>RGPD · CNIL</li><li>Loi anti-fraude TVA</li><li>Secrets masqués</li></ul>
+          </div>
+          <div class="skill reveal">
+            <h3>3D &amp; motion</h3>
+            <ul class="chips"><li>Three.js</li><li>Blender · bpy</li><li>React Three Fiber</li><li>WebGL</li><li>GSAP</li><li>Remotion</li></ul>
+          </div>
+        </div>
+
+        <aside class="method reveal" aria-labelledby="method-title">
+          <div class="method-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 17l6-6-6-6M12 19h8"/></svg>
+          </div>
+          <div>
+            <h3 id="method-title">Méthode&nbsp;: développement assisté par agents IA</h3>
+            <p>Je travaille au quotidien avec des agents de code (Claude Code, Codex)&nbsp;: consignes de projet versionnées (<code>AGENTS.md</code>, <code>CLAUDE.md</code>), plusieurs agents en parallèle sur des worktrees Git, relecture et fusion de leurs branches. C'est ce qui me permet de livrer vite, en gardant la main sur l'architecture, les tests et la revue.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ PARCOURS ============ -->
+    <section class="section section-alt" id="parcours" aria-labelledby="parcours-title">
+      <div class="wrap">
+        <header class="section-head reveal">
+          <p class="kicker mono">04 — Parcours</p>
+          <h2 id="parcours-title">Expérience <span class="serif">&amp;</span> formation.</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="tl reveal">
+            <p class="tl-date mono">2025 → aujourd'hui</p>
+            <div class="tl-body">
+              <h3>Développeur full-stack indépendant &amp; fondateur</h3>
+              <p class="tl-org">Mailbase · studio web MCIUT · FrenchWeb</p>
+              <ul class="points">
+                <li>Fondateur de <strong>Mailbase</strong>, SaaS de prospection e-mail en production (IA, MCP, Stripe, Amazon SES).</li>
+                <li>Deux apps iOS publiées sur l'App Store&nbsp;: Scrollworthy et Tappy.</li>
+                <li>Studio web <strong>MCIUT</strong>&nbsp;: sites pour artisans en Bourgogne, avec un réseau de modèles optimisés pour le SEO local.</li>
+                <li>Projets clients&nbsp;: Lumen 71 (association), Zayaniss Soins (e-commerce), LaRelance pour une pizzeria, outil de fidélité pour un magasin.</li>
+                <li>Infrastructure auto-hébergée&nbsp;: environ 10 apps en production sur Coolify, CI GitHub Actions et Xcode Cloud.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="tl reveal">
+            <p class="tl-date mono">2024 – 2026</p>
+            <div class="tl-body">
+              <h3>BUT Informatique</h3>
+              <p class="tl-org">IUT · Université de Franche-Comté</p>
+              <p>Projets (SAÉ)&nbsp;: site d'analyse économique en équipe de trois, applications web Flask et MySQL, site e-commerce.</p>
+            </div>
+          </li>
+          <li class="tl reveal">
+            <p class="tl-date mono">2024</p>
+            <div class="tl-body">
+              <h3>Baccalauréat STI2D, spécialité 2I2D</h3>
+              <p class="tl-org">Ingénierie, innovation et développement durable</p>
+              <p>Projet de terminale&nbsp;: automatisation d'une serre (irrigation, chauffage, autonomie solaire).</p>
+            </div>
+          </li>
+        </ol>
+
+        <div class="langs reveal">
+          <p><span class="mono">Langues</span> Français — langue maternelle · Anglais — technique (documentation, code)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <p class="kicker mono reveal">05 — Contact</p>
+        <h2 class="contact-title reveal" id="contact-title">Vous recrutez&nbsp;? <span class="serif">Parlons-en.</span></h2>
+        <p class="section-sub reveal">Je cherche un CDI ou un CDD dans une équipe produit ou technique. Le plus simple&nbsp;: un e-mail.</p>
+        <div class="contact-row reveal">
+          <a class="email-big" href="mailto:amin2020e@gmail.com">amin2020e@gmail.com</a>
+          <button class="btn btn-small copy-btn" type="button" data-copy="amin2020e@gmail.com">
+            <span class="copy-label">Copier</span>
+          </button>
+        </div>
+        <div class="cta-row reveal">
+          <a class="btn btn-primary" href="Tahar-Amin-Touzi-CV.pdf" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+            Télécharger le CV (PDF)
+          </a>
+          <a class="btn" href="https://github.com/amintt2" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+            github.com/amintt2
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <p>© 2026 Tahar Amin Touzi</p>
+      <p class="mono">Site statique fait main · HTML, CSS, JS · sans framework</p>
+      <a href="#top" class="to-top">Haut de page <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
