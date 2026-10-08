@@ -39,12 +39,12 @@
   requestAnimationFrame(function () { requestAnimationFrame(function () { title && title.classList.add('in'); }); });
 
   // Décalage en cascade pour les éléments frères
-  document.querySelectorAll('.stats-grid, .skills, .minis, .timeline').forEach(function (list) {
+  document.querySelectorAll('.figures-grid, .skills, .minis, .timeline').forEach(function (list) {
     Array.prototype.forEach.call(list.children, function (el, i) { el.style.setProperty('--d', (i * 70) + 'ms'); });
   });
   document.querySelectorAll('.hero .reveal').forEach(function (el, i) { el.style.setProperty('--d', (380 + i * 90) + 'ms'); });
   document.querySelectorAll('.case').forEach(function (c) {
-    var b = c.querySelector('.case-body'); if (b) b.style.setProperty('--d', '90ms');
+    var b = c.querySelector('.case-body'); if (b) b.style.setProperty('--d', '120ms');
   });
 
   var revealEls = document.querySelectorAll('.reveal');
@@ -81,7 +81,7 @@
 
   /* ---- Halo qui suit le pointeur sur les cartes ---- */
   if (finePointer) {
-    document.querySelectorAll('.mini, .skill, .now-card').forEach(function (card) {
+    document.querySelectorAll('.mini, .skill, .live').forEach(function (card) {
       card.classList.add('spot');
       card.addEventListener('pointermove', function (e) {
         var r = card.getBoundingClientRect();
@@ -108,6 +108,12 @@
     btn.addEventListener('click', function () {
       var f = btn.getAttribute('data-filter');
       buttons.forEach(function (b) { b.setAttribute('aria-pressed', b === btn ? 'true' : 'false'); });
+      // Sur mobile, la barre de filtres défile horizontalement : on garde le filtre actif visible.
+      var bar = btn.parentElement;
+      if (bar.scrollWidth > bar.clientWidth) {
+        var br = btn.getBoundingClientRect(), cr = bar.getBoundingClientRect();
+        bar.scrollTo({ left: bar.scrollLeft + br.left - cr.left - (cr.width - br.width) / 2, behavior: reduced ? 'auto' : 'smooth' });
+      }
       var shown = 0;
       rows.forEach(function (r, i) {
         var match = f === 'all' || r.getAttribute('data-cat').split(' ').indexOf(f) !== -1;

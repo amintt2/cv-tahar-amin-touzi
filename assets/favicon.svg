@@ -1,8 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <style>
-    .bg { fill: #161412; } .fg { stroke: #f0a45c; }
-    @media (prefers-color-scheme: light) { .bg { fill: #221e1a; } }
-  </style>
-  <rect class="bg" x="1" y="1" width="30" height="30" rx="9"/>
-  <path class="fg" d="M9 11h14M16 11v12" fill="none" stroke-width="3.2" stroke-linecap="round"/>
+  <rect width="32" height="32" rx="6" fill="#0d0f12"/>
+  <rect x="7" y="7" width="8" height="8" fill="#ffffff"/>
+  <rect x="17" y="7" width="8" height="8" fill="#ff5a1f"/>
+  <rect x="7" y="17" width="8" height="8" fill="#ffffff"/>
+  <rect x="17" y="17" width="8" height="8" fill="#ffffff"/>
 </svg>
