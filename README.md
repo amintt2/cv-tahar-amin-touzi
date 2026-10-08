@@ -75,6 +75,11 @@ Règle : n'écrire que des faits vérifiables (chiffres issus des dépôts, lien
 
 ## Déploiement
 
+Le serveur n'envoie pas d'en-tête de cache : à chaque modification de `assets/css/style.css` ou
+`assets/js/main.js`, changer le `?v=AAAA-MM-JJ` de leurs liens dans `index.html`, sinon les navigateurs
+gardent l'ancienne version et la page s'affiche cassée.
+
+
 Coolify, build pack **Static** : le dépôt est servi tel quel depuis sa racine (`index.html`),
 domaine `https://tahar.french-web.com`. Aucun build, aucune variable d'environnement.
 Chaque push sur `main` redéploie le site.
