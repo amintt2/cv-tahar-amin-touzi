@@ -10,6 +10,7 @@ En ligne sur **https://tahar.french-web.com**.
 - Thèmes clair (blanc franc) et sombre (préférence système, bouton pour forcer). Le hero, les plaques
   des captures, le contact et le pied de page restent sombres dans les deux thèmes (classe `.on-night`).
 - Animations (tracé du hero, apparitions, bandeau) désactivées si `prefers-reduced-motion` est actif.
+- Scènes WebGL (voir plus bas) : lignes de niveau vivantes dans le hero, terrain 3D dans le contact.
 - Polices auto-hébergées (Geist, Geist Mono, licence SIL OFL) : aucune requête vers un tiers.
 
 ## Arborescence
@@ -19,7 +20,9 @@ index.html                  la page (tout le contenu est ici)
 Tahar-Amin-Touzi-CV.pdf     le CV téléchargé depuis le site (copie de cv/…pdf)
 assets/css/style.css        styles ; les couleurs sont des tokens en tête de fichier (clair, sombre, .on-night)
 assets/js/main.js           thème, apparitions, filtres de l'index, aperçu au survol, copie de l'e-mail
-assets/topo.svg             lignes de niveau (fond du hero, des plaques, de la méthode et du contact)
+assets/js/scene.js          scènes WebGL (hero et contact), indépendant de main.js
+assets/topo.svg             lignes de niveau (fond du hero, des plaques, de la méthode et du contact ;
+                            repli du hero quand WebGL est indisponible)
 assets/fonts/               polices woff2 (site + CV)
 assets/shots/               captures WebP des projets (1600 px max), thumbs/ en 800 px
 assets/og.png               image Open Graph 1200×630
@@ -53,6 +56,30 @@ cv/Tahar-Amin-Touzi-CV.pdf  CV généré
 
 Règle : n'écrire que des faits vérifiables (chiffres issus des dépôts, liens en ligne).
 
+## Scènes WebGL (`assets/js/scene.js`)
+
+WebGL 1 brut (extension `OES_standard_derivatives`), aucune bibliothèque ni requête externe, ~29 Ko (~10 Ko gzip).
+
+- **Hero** : un canvas plein cadre (`.hero-gl`) sous le tracé SVG. Shader de lignes de niveau sur un bruit
+  simplex 3D qui évolue lentement ; une ligne sur cinq plus marquée, traits anti-crénelés à épaisseur constante
+  (`fwidth`). Le relief forme des sommets sous les cercles-repères du tracé orange (positions lues dans le SVG).
+  Au survol, le relief se soulève sous le curseur et les lignes proches virent à l'orange ; le mouvement
+  émet des ondes (un tap aussi sur mobile). Léger parallaxe au défilement et à la souris. Le voile bas du
+  hero est recalculé dans le shader.
+- **Contact** : terrain 3D (`.terrain`, maillage 150×150, 100×100 sur mobile) en perspective, lignes de niveau
+  et grille fine, itinéraire orange en pointillés drapé sur le relief qui se dessine à l'arrivée, repères
+  (sprites) et cible pulsante au sommet ; rotation lente, légère inclinaison à la souris. Il remplace le tracé
+  SVG `.contact-route` (classe `.has-terrain`) ; sous 900 px il passe sous les boutons.
+- **Performance** : terrain initialisé à l'approche de la section (IntersectionObserver), rendu en pause hors
+  écran et onglet caché, une seule boucle `requestAnimationFrame`. Résolution plafonnée (hero ×1,5, ×1,25 sur
+  mobile ; terrain ×2, ×1,5 sur mobile), baissée automatiquement si la cadence chute, scène figée sur une
+  image si elle reste trop lente (rendu logiciel).
+- **Repli** : sans WebGL, sans l'extension, en cas d'échec de compilation ou de perte du contexte, aucun
+  canvas n'est ajouté (ou il est retiré) : le fond `topo.svg` et le tracé SVG d'origine restent.
+  `failIfMajorPerformanceCaveat` est demandé ; `?gl=force` dans l'URL l'ignore (tests sans GPU).
+- **`prefers-reduced-motion`** : une seule image, sans animation ni interaction.
+- Les canvas sont `aria-hidden` et ne contiennent aucun texte. `window.__sceneStats` résume l'état (débogage).
+
 ## Mettre à jour le CV
 
 1. Modifier `cv/cv.html` (contenu) et `cv/cv.css` (mise en page A4).
@@ -75,9 +102,10 @@ Règle : n'écrire que des faits vérifiables (chiffres issus des dépôts, lien
 
 ## Déploiement
 
-Le serveur n'envoie pas d'en-tête de cache : à chaque modification de `assets/css/style.css` ou
-`assets/js/main.js`, changer le `?v=AAAA-MM-JJ` de leurs liens dans `index.html`, sinon les navigateurs
-gardent l'ancienne version et la page s'affiche cassée.
+Le serveur n'envoie pas d'en-tête de cache : à chaque modification de `assets/css/style.css`,
+`assets/js/main.js` ou `assets/js/scene.js`, changer le `?v=AAAA-MM-JJ` (suffixe `b`, `c`… si plusieurs
+versions le même jour) de leurs liens dans `index.html`, sinon les navigateurs gardent l'ancienne version
+et la page s'affiche cassée.
 
 
 Coolify, build pack **Static** : le dépôt est servi tel quel depuis sa racine (`index.html`),

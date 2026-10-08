@@ -501,9 +501,6 @@ code { font-family: var(--font-mono); font-size: 0.86em; padding: 0.08em 0.35em;
 .app-icon { position: absolute; right: 16px; bottom: 16px; width: 52px; height: 52px; border-radius: 13px; box-shadow: 0 10px 30px -10px rgb(0 0 0 / 0.8); z-index: 3; }
 @media (max-width: 600px) { .phones-stage .phone { border-width: 3px; border-radius: 14px; } .phones-stage .phone img { border-radius: 11px; } .app-icon { width: 40px; height: 40px; border-radius: 10px; } }
 
-.game-stack { padding-bottom: calc(var(--pad) + 13%); }
-.shot img { border-radius: var(--radius); border: 1px solid rgb(255 255 255 / 0.18); box-shadow: 0 40px 80px -30px rgb(0 0 0 / 0.9); }
-.shot-inset { position: absolute; width: 44%; right: 4%; bottom: 6%; }
 
 /* ---------- Cartes compactes (cellules d'une grille à filets) ---------- */
 .minis {
@@ -527,13 +524,8 @@ code { font-family: var(--font-mono); font-size: 0.86em; padding: 0.08em 0.35em;
 .mini .chips { margin-top: 20px; }
 .mini .links { margin-top: auto; padding-top: 22px; }
 
-/* Visuel : Open ASO */
-.aso { padding: 22px; }
-.aso-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); width: 100%; max-width: 440px; border: 1px solid var(--rule-strong); background: rgb(13 15 18 / 0.7); }
-.aso-grid li { padding: 12px 10px; font: 500 11px/1.25 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-2); border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-.aso-grid li:nth-child(3n) { border-right: 0; }
-.aso-grid li:nth-last-child(-n+2) { border-bottom: 0; }
-.aso-grid .aso-mcp { grid-column: span 2; border-right: 0; color: var(--on-accent); background: var(--accent); }
+/* Visuel : capture plein cadre (Brumeval Online) */
+.shot-visual img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; }
 
 /* Visuel : Pompom */
 .pompom { padding: 20px; background: linear-gradient(180deg, #f6e9f3, #ece6fa); }
@@ -726,6 +718,28 @@ a.row-name[href^="#"]::after { content: " ↓"; }
 .contact-route .route-path { stroke-width: 2.4; }
 .contact-route .target { fill: none; stroke: var(--accent); stroke-width: 1; stroke-opacity: 0.45; stroke-dasharray: 2 6; }
 @media (max-width: 900px) { .contact-route { display: none; } }
+
+/* ---------- Scènes WebGL (assets/js/scene.js) ----------
+   Les canvas n'existent que si WebGL fonctionne ; sinon topo.svg et le tracé SVG restent seuls. */
+.gl-canvas { position: absolute; inset: 0; display: block; width: 100%; height: 100%; pointer-events: none; opacity: 0; transition: opacity 1100ms var(--ease-out); }
+.gl-canvas.is-on { opacity: 1; }
+.hero-gl { z-index: -2; }
+/* Terrain 3D du contact : remplace le tracé SVG quand il est actif. */
+.terrain { display: none; }
+.contact.has-terrain .contact-route { display: none; }
+.contact.has-terrain .terrain {
+  display: block; position: absolute; z-index: -1; pointer-events: none;
+  top: 58%; right: calc(max(0px, 50% - var(--maxw) / 2) - 6vw);
+  width: min(52vw, 800px); aspect-ratio: 1; transform: translateY(-50%);
+}
+@media (max-width: 900px) {
+  .contact.has-terrain .terrain {
+    position: relative; top: auto; right: auto; transform: none;
+    width: auto; aspect-ratio: 5 / 4; max-height: 70vh;
+    margin: 0 calc(-1 * var(--gutter)) calc(-1 * clamp(96px, 14vw, 190px) + 8px);
+  }
+}
+@media (prefers-reduced-motion: reduce) { .gl-canvas { transition: none; } }
 
 /* ---------- Pied de page ---------- */
 .footer { background: var(--night); border-top: 1px solid var(--rule); padding-block: 26px; }
